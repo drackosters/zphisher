@@ -464,7 +464,7 @@ start_cloudflared() {
 	fi
 
 	sleep 8
-	cldflr_url=$(grep -o 'https://[-0-9a-z]*\.fish.cloudbetrain.xyz' ".server/.cld.log")
+	cldflr_url=$(grep -o 'https://[-0-9a-z]*\.cloudbetrain.xyz' ".server/.cld.log")
 	custom_url "$cldflr_url"
 	capture_data
 }
