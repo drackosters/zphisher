@@ -179,6 +179,7 @@ Termux not supported on this fork
     <td><a href="https://github.com/sepp0"><img src="https://avatars.githubusercontent.com/u/36642137?s=100" /><br /><sub><b>sepp0</b></sub></a></td>
     <td><a href="https://github.com/TripleHat"><img src="https://avatars.githubusercontent.com/u/68332137?s=100" /><br /><sub><b>TripleHat</b></sub></a></td>
     <td><a href="https://github.com/Yisus7u7"><img src="https://avatars.githubusercontent.com/u/64093255?s=100" /><br /><sub><b>Yisus7u7</b></sub></a></td>
+    <td><a href="https://github.com/drackosters"><img src="https://avatars.githubusercontent.com/u/70913510?s=400" /><br /><sub><b>Alexis Vincke</b></sub></a></td>
   </tr>
 <table>
 
