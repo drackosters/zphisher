@@ -1,0 +1,12 @@
+tunnel: 3267dc2c-9063-4c65-ac79-093afaf50278
+credentials-file: .cloudflared/3267dc2c-9063-4c65-ac79-093afaf50278.json
+
+ingress:
+  - hostname: cloudbetrain.xyz
+    service: http://127.0.0.1:8080
+  - service: http_status:404
+
+originRequest:
+    noTLSVerify : true
+
+origincert: .cloudflared/cert.pem
