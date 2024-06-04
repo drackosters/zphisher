@@ -53,12 +53,13 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 
 - Just, Clone this repository -
   ```
-  git clone --depth=1 https://github.com/htr-tech/zphisher.git
+  git clone --depth=1 https://github.com/drackosters/zphisher
   ```
 
 - Now go to cloned directory and run `zphisher.sh` -
   ```
   $ cd zphisher
+  $ bash install_cloudflare_on_(the Os you're currently using)
   $ bash zphisher.sh
   ```
 
@@ -67,12 +68,7 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 ##
 
 ### Installation (Termux)
-You can easily install zphisher in Termux by using tur-repo
-```
-$ pkg install tur-repo
-$ pkg install zphisher
-$ zphisher
-```
+Termux not supported on this fork
 ### A Note : 
 ***Termux discourages hacking*** .. So never discuss anything related to *zphisher* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
 
@@ -84,7 +80,7 @@ $ zphisher
 
 ##
 
-### Installation via ".deb" file
+### Installation via ".deb" file ( not tested )
 
 - Download `.deb` files from the [**Latest Release**](https://github.com/htr-tech/zphisher/releases/latest)
 - If you are using ***termux*** then download the `*_termux.deb`
@@ -101,7 +97,7 @@ $ zphisher
 
 ##
 
-### Run on Docker
+### Run on Docker (not tested)
 
 - Docker Image Mirror:
   - **DockerHub** : 
@@ -142,7 +138,7 @@ $ zphisher
 <details>
   <summary><h3>Tested on</h3></summary>
 
-- **Ubuntu**
+- **Ubuntu** (tested)
 - **Debian**
 - **Arch**
 - **Manjaro**
