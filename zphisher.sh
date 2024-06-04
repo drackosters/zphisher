@@ -1,9 +1,10 @@
 #!/bin/bash
 
 ##   Zphisher 	: 	Automated Phishing Tool
-##   Author 	: 	TAHMID RAYAT 
+##   Author 	: 	TAHMID RAYAT / dracksters 
 ##   Version 	: 	2.3.5
 ##   Github 	: 	https://github.com/htr-tech/zphisher
+##   FORK 	:	https://github.com/drackosters/zphisher
 
 
 ##                   GNU GENERAL PUBLIC LICENSE
@@ -215,7 +216,7 @@ banner() {
 		${ORANGE}      | |                                
 		${ORANGE}      |_|                ${RED}Version : ${__version__}
 
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by htr-tech (tahmid.rayat)${WHITE}
+		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by htr-tech (tahmid.rayat) modified by dracksters ${WHITE}
 	EOF
 }
 
@@ -352,7 +353,7 @@ about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
 		${GREEN} Author   ${RED}:  ${ORANGE}TAHMID RAYAT ${RED}[ ${ORANGE}HTR-TECH ${RED}]
-		${GREEN} Github   ${RED}:  ${CYAN}https://github.com/htr-tech
+		${GREEN} Github   ${RED}:  ${CYAN}https://github.com/drackosters/zphisher
 		${GREEN} Social   ${RED}:  ${CYAN}https://tahmidrayat.is-a.dev
 		${GREEN} Version  ${RED}:  ${ORANGE}${__version__}
 
