@@ -384,9 +384,7 @@ about() {
 }
 
 ## Choose custom port
-cusport() {
-	
-}
+cusport() 
 
 ## Setup website and start php server
 setup_site() {
