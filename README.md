@@ -144,6 +144,7 @@ Termux not supported on this fork
 - **Manjaro**
 - **Fedora**
 - **Termux**
+- **Kali Linux** (tested)
 </details>
 
 ##
