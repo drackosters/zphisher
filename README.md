@@ -138,13 +138,14 @@ Termux not supported on this fork
 <details>
   <summary><h3>Tested on</h3></summary>
 
-- **Ubuntu** (tested)
-- **Debian**
-- **Arch**
-- **Manjaro**
-- **Fedora**
-- **Termux**
-- **Kali Linux** (tested)
+- **Ubuntu** (works)
+- **Debian** (not tested)
+- **Arch** (not tested)
+- **Manjaro** (not tested)
+- **Fedora** (not tested)
+- **Termux** (not tested)
+- **Kali Linux** (idk it did a weird thing when i did on kali)
+- **Ubuntu XFCE**  (works)
 </details>
 
 ##
