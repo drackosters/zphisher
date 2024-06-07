@@ -1,8 +1,8 @@
 tunnel: 3267dc2c-9063-4c65-ac79-093afaf50278
-credentials-file: .cloudflared/3267dc2c-9063-4c65-ac79-093afaf50278.json
+credentials-file: .cloudflared/65f0def3-8a87-413b-93b7-d9dd16bbc5c4.json
 
 ingress:
-  - hostname: cloudbetrain.xyz
+  - hostname: betraincloud.com
     service: http://127.0.0.1:8080
   - service: http_status:404
 
