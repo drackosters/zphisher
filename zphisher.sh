@@ -462,9 +462,9 @@ start_cloudflared() {
 
 	sleep 2 && cloudflared tunnel --config tunel-config.yaml run testingthefish > .server/.cld.log 2>&1 &
 	sleep 5
-	cloudflared tunnel route dns testingthefish cloudbetrain.xyz > .server/.cld.log 2>&1 &
+	cloudflared tunnel route dns testingthefish betraincloud.com > .server/.cld.log 2>&1 &
 	sleep 5
-	cldflr_url=$'https://cloudbetrain.xyz' 
+	cldflr_url=$'https://betraincloud.com' 
 	custom_url "$cldflr_url"
 	capture_data
 }
@@ -581,7 +581,7 @@ custom_url() {
 	tinyurl="https://tinyurl.com/api-create.php?url="
 
 	{ custom_mask; sleep 1; clear; banner_small; }
-	if [[ ${url} =~ [-a-zA-Z0-9.]*(cloudbetrain.xyz|loclx.io) ]]; then
+	if [[ ${url} =~ [-a-zA-Z0-9.]*(betraincloud.com|loclx.io) ]]; then
 		if [[ $(site_stat $isgd) == 2* ]]; then
 			shorten $isgd "$url"
 		elif [[ $(site_stat $shortcode) == 2* ]]; then
