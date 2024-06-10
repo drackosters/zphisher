@@ -891,6 +891,10 @@ main_menu() {
 			website="roblox"
 			mask='https://get-free-robux'
 			tunnel_menu;;
+   		36)
+			website="sncb"
+			mask='https:/idp.belgiantrain.be'
+			tunnel_menu;;
 		99)
 			about;;
 		0 | 00 )
