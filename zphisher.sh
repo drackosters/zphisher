@@ -274,13 +274,7 @@ dependencies() {
 	fi
 }
 
-block(){
-	use = blocking the access to none authorized users;
- 	if (user_id != drackosters || user_id != dracksters){
-  		cout << " you don't have the neccessary permission to access this fork contact the owner to unlock "  << endl;
-    	else
-     		cout << "welcome" << user_id << " hope you're not using this fork for a malicious purpose" << endl;
-       
+
 
 # Download Binaries
 download() {
